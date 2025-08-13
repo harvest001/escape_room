@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교실 방탈출 게임</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>교실 방탈출</h1>
+    <p>교실에 갇혔습니다. 곳곳에 숨겨진 힌트를 찾아 비밀번호를 알아내고 탈출하세요!</p>
+
+    <div id="game-container">
+        <!-- 클릭 가능한 오브젝트 -->
+        <div class="clickable" id="chalkboard" title="칠판을 조사한다"></div>
+        <div class="clickable" id="globe" title="지구본을 조사한다"></div>
+        <div class="clickable" id="window" title="창문을 조사한다"></div>
+        <div class="clickable" id="desks" title="책상을 조사한다"></div>
+        <div class="clickable" id="door" title="문으로 탈출한다"></div>
+    </div>
+
+    <!-- 칠판 모달 -->
+    <div id="chalkboard-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>칠판</h2>
+            <p>"빛을 되찾다"는 뜻을 가진, 1945년 8월 15일을 기념하는 국경일의 이름은 무엇일까요?</p>
+            <input type="text" id="chalkboard-answer" placeholder="정답 입력">
+            <button id="chalkboard-submit">확인</button>
+        </div>
+    </div>
+
+    <!-- 지구본 모달 -->
+    <div id="globe-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>지구본</h2>
+            <p>2025년은 우리나라가 해방된 지 몇 주년이 되는 해일까요? (숫자만 입력)</p>
+            <input type="number" id="globe-answer" placeholder="숫자 입력">
+            <button id="globe-submit">확인</button>
+        </div>
+    </div>
+
+    <!-- 창문 모달 -->
+    <div id="window-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>창문</h2>
+            <p>창밖으로 밝은 빛이 들어온다. 어둠이 걷히고 마침내 빛을 되찾은 것 같다. 이 빛은 희망의 상징이다.</p>
+        </div>
+    </div>
+
+    <!-- 책상 모달 -->
+    <div id="desks-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>책상</h2>
+            <p>가장 앞쪽 책상 서랍이 굳게 잠겨있다. 4자리 숫자로 된 비밀번호가 필요한 것 같다.<br>(힌트: 우리가 빛을 되찾은 그 날짜)</p>
+            <input type="text" id="desks-answer" placeholder="MMDD 형식으로 입력" maxlength="4">
+            <button id="desks-submit">열기</button>
+        </div>
+    </div>
+
+    <!-- 문 모달 -->
+    <div id="door-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>문</h2>
+            <p>문이 잠겨있다. 지금까지 얻은 힌트를 조합하여 비밀번호를 입력하자.</p>
+            <input type="text" id="door-answer" placeholder="비밀번호 입력">
+            <button id="door-submit">탈출</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

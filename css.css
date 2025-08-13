@@ -1,0 +1,107 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+#game-container {
+    position: relative;
+    width: 800px;
+    height: 533px; /* 이미지 비율에 맞게 조정 */
+    margin: 20px auto;
+        background-image: url('escape_room/bg-2.jpg'); /* 상대 경로로 수정 */
+    background-size: cover;
+    border: 2px solid #555;
+}
+
+.clickable {
+    position: absolute;
+    background-color: rgba(255, 255, 0, 0.2);
+    border: 2px dashed rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.clickable:hover {
+    background-color: rgba(255, 255, 0, 0.4);
+    border: 2px dashed white;
+}
+
+/* 오브젝트 위치 및 크기 설정 */
+#chalkboard { top: 200px; left: 290px; width: 280px; height: 160px; }
+#globe { top: 380px; left: 600px; width: 180px; height: 210px; }
+#window { top: 100px; left: 10px; width: 160px; height: 320px; }
+#desks { top: 480px; left: 180px; width: 380px; height: 150px; }
+#door { top: 80px; left: 815px; width: 85px; height: 450px; background-color: rgba(0, 128, 255, 0.2); }
+
+/* 모달 스타일 */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    text-align: center;
+    position: relative;
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input[type="text"], input[type="number"] {
+    width: 60%;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
